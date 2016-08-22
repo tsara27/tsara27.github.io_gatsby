@@ -1,0 +1,237 @@
+@include font-face('LatoWeb', '../fonts/lato/Lato-Regular', $file-formats: eot woff2 woff);
+@include font-face('LatoWebLight', '../fonts/lato/Lato-Light', $file-formats: eot woff2 woff);
+@include font-face('FontAwesome', '../fonts/fa/fontawesome-webfont', $file-formats: eot woff2 woff);
+
+body{
+  background-color: #ffffff;
+  background-repeat: repeat;
+  height: 100%;
+}
+
+p {
+  font-family: 'LatoWebLight' !important;
+  font-weight: 300;
+}
+
+.wrapper{
+  @include media-query($on-palm) {
+    max-width: 94%;
+  }
+  @include media-query($on-tablet) {
+    max-width: 94%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1070px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1070px;
+  }
+}
+
+
+.links{
+  text-align: center;
+}
+
+.links a{
+  display: block;
+  text-align: right;
+  font-size: 1.5em;
+  color: #A5A5A5;
+  text-transform: uppercase;
+  margin-right: 1em;
+  @include transition-duration(1.5s);
+  font-weight: bold;
+  &:hover{
+    text-decoration: none;
+    color: lighten(#ddd,10%);
+    @include transition-duration(1.5s);
+  }
+  @include media-query($on-palm) {
+    display: inline-block;
+    @include margin(null 0.3em null 0.3em);
+    width: auto !important;
+    text-align: center;
+    font-size: large;
+  }
+  @include media-query($on-tablet) {
+    display: inline-block;
+    @include margin(null 0.3em null 0.3em);
+    width: auto !important;
+    text-align: center;
+    font-size: larger;
+  }
+}
+
+.sidebar{
+  width: 20em;
+  background-image: url("/images/sidebar.jpg");
+  height: 100%;
+  position: fixed;
+  color: #A5A5A5;
+  font-size: medium;
+  @include media-query($on-palm) {
+    width: 100%;
+    height: 15em;
+    position: static;
+    background-size: 100% 100%;
+    background-image: url("/images/horizontal-sidebar.jpg");
+  }
+  @include media-query($on-tablet) {
+      width: 100%;
+      height: 15em;
+      position: static;
+      background-size: 100% 100%;
+      background-image: url("/images/horizontal-sidebar.jpg");
+  }
+
+}
+
+.page-content{
+    float: left;
+    @include margin(null 1.5em null 21.5em);
+    text-align: justify;
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+    @include media-query($on-palm) {
+      @include margin(null 1.5em null 1.5em);
+      max-width: 65%;
+    }
+    @include media-query($on-tablet) {
+      @include margin(null 1.5em null 2.5em);
+      max-width: 85%;
+    }
+}
+
+footer.site-footer{
+    float: left;
+    margin-left: 21.5em;
+    flex: 1;
+    @include media-query($on-palm) {
+        margin-left: 0;
+
+    }
+    @include media-query($on-tablet) {
+        margin-left: 0;
+    }
+}
+
+#profile-picture{
+  text-align: center;
+  img{
+    margin-top: 3em;
+    @include media-query($on-palm) {
+      margin-top: 1em;
+      width: 75px;
+      height: 750px;
+    }
+    @include media-query($on-tablet) {
+      margin-top: 1em;
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+
+.quotes{
+  @include transition-duration(1.5s);
+  @include margin(null 1.5em null 1em);
+  text-align: right;
+  @include media-query($on-palm) {
+    display: none;
+  }
+  @include media-query($on-tablet) {
+    display: none;
+  }
+  &:hover{
+    @include transition-duration(1.5s);
+    text-decoration: none;
+    color: #fff;
+
+  }
+}
+
+.social-icons{
+  text-align: center;
+  @include margin(1.5em 0.3em 1.5em 0.3em);
+  @include media-query($on-palm) {
+    margin: 0;
+  }
+}
+
+.profile-caption{
+  text-align: center;
+  @include margin(1.5em 1em null 1em);
+  @include media-query($on-palm) {
+    margin-top: 0;
+  }
+  @include media-query($on-tablet) {
+    margin-top: 0;
+  }
+}
+
+#disqus_thread{
+  @include margin(null 1.5em null 1.5em);
+}
+a.tag{
+  background: #828282;
+  color: white;
+  font-weight: bold;
+  font-family: 'LatoWeb';
+  padding: 3px 11px 6px 11px;
+  margin: 3px;
+  border-radius: 3px;
+  &:hover{
+    text-decoration: none;
+    color: lighten(#FFF,10%);
+    background-color: lighten(#8B8B8B,5%);
+  }
+}
+.fa-tags + a.tag {
+  margin-left: 6px;
+}
+.fa-calendar + span {
+  margin-left: 3px;
+}
+.profile-caption, .quotes{
+  font-size: larger;
+  @include media-query($on-palm) {
+    font-size: 12px;
+  }
+  @include media-query($on-tablet) {
+    font-size: 14px;
+  }
+}
+.post-content{
+  font-size: larger;
+}
+.post-list{
+  color: #111;
+}
+a.post-link{
+  @include transition-duration(0.5s);
+  color: #111;
+  &:hover{
+    text-decoration: none;
+    color: lighten(#2A180F,10%);
+    @include transition-duration(0.5s);
+  }
+}
+a.read-more{
+  margin: 0.4em;
+  color: #dc4126;
+  border-radius: 0.3em;
+  font-weight: bold;
+  font-family: LatoWeb;
+  font-size: 0.9em;
+  &:hover{
+    text-decoration: none;
+    color: lighten(#dc4126,10%);  }
+}
