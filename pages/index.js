@@ -24,7 +24,7 @@ export default class Index extends React.Component {
             <h2>
               <Link className="post-link" to={prefixLink(page.path)}>{access(page, 'data.title')}</Link>
             </h2>
-            <p className="post-meta"><PostDate date={page.date} /> • <Tags tags={tags} /></p>
+            <p className="post-meta"><PostDate date={access(page, 'data.date')} /> • <Tags tags={tags} /></p>
             <p className="post-content">{access(page, 'data.description')}<Link className="read-more" to={prefixLink(page.path)}>Read More</Link></p>
           </li>
         )

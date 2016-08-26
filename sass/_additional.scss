@@ -24,7 +24,7 @@ p {
 
 @media (min-width: 1200px) {
   .wrapper {
-    width: 1070px;
+    min-width: 1070px;
   }
 }
 
@@ -185,7 +185,7 @@ a.tag{
   color: white;
   font-weight: bold;
   font-family: 'LatoWeb';
-  padding: 3px 11px 6px 11px;
+  padding: 3px 5px 6px 5px;
   margin: 3px;
   border-radius: 3px;
   &:hover{
@@ -202,6 +202,7 @@ a.tag{
 }
 .profile-caption, .quotes{
   font-size: larger;
+  cursor: default;
   @include media-query($on-palm) {
     font-size: 12px;
   }
