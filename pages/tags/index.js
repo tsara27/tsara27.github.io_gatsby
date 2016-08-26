@@ -13,27 +13,23 @@ export default class Index extends React.Component {
   render () {
     const rows = []
     const pages = _.sortBy(this.props.route.pages, function(page) { return moment(new Date(access(page, 'data.date'))).format("X") }).reverse()
+    const tag = window.location.hash.substring(1)
     pages.forEach(function(page) {
       if (access(page, 'file.ext') === 'md' && _.includes(page.path, '/blog/')) {
-        const tags = []
-        access(page, 'data.tags').split(' ').forEach(function(tag) {
-          tags.push(tag)
-        })
-        rows.push(
-          <li>
-            <h2>
-              <Link className="post-link" to={prefixLink(page.path)}>{access(page, 'data.title')}</Link>
-            </h2>
-            <p className="post-meta"><PostDate date={access(page, 'data.date')} /> • <Tags tags={tags} /></p>
-            <p className="post-content">{access(page, 'data.description')}<Link className="read-more" to={prefixLink(page.path)}>Read More</Link></p>
-          </li>
-        )
+        if (_.includes(access(page, 'data.tags').split(' '), tag)) {
+          rows.push(
+            <li>
+              <Link className="post-link" to={prefixLink(page.path)}>{access(page, 'data.title')} <PostDate date={access(page, 'data.date')} /></Link>
+            </li>
+          )
+        }
       }
     })
     return (
       <DocumentTitle title={config.siteTitle}>
         <div className="home">
-          <ul className="post-list">
+          <h1>Tag: '{tag}'</h1>
+          <ul>
             {rows}
           </ul>
         </div>
