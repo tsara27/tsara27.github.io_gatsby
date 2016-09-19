@@ -108,6 +108,9 @@ p {
       @include margin(null 1.5em null 2.5em);
       max-width: 85%;
     }
+    p {
+      font-size: 1.1em;
+    }
 }
 
 footer.site-footer{
