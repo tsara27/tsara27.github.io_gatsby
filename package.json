@@ -13,6 +13,7 @@
     "highlight.js": "^9.3.0",
     "history": "^2.0.2",
     "js-yaml": "^3.6.0",
+    "lodash": "^4.16.1",
     "markdown-it": "^7.0.0",
     "markdown-it-abbr": "^1.0.3",
     "markdown-it-attrs": "^0.6.0",
@@ -44,13 +45,15 @@
     "eslint-plugin-react": "^6.0.0",
     "gh-pages": "^0.11.0",
     "image-webpack-loader": "^2.0.0",
+    "node-sass": "^3.10.0",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.9.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.10",
+    "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.2"
   },
   "keywords": [
     "gatsby"

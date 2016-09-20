@@ -8,5 +8,5 @@ module.exports = React.createClass({
     return (
       <Link className="tag" to={prefixLink('/tags/'+'#'+tag)}>{this.props.tag}</Link>
     )
-  },
+  }
 })

@@ -4,7 +4,6 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Sidebar from 'components/Sidebar'
 
-import { rhythm } from 'utils/typography'
 import 'sass/main.scss'
 
 module.exports = React.createClass({
