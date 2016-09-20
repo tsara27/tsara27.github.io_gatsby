@@ -13,7 +13,7 @@ export default class Index extends React.Component {
   render () {
     const rows = []
     const pages = _.sortBy(this.props.route.pages, function(page) { return moment(new Date(access(page, 'data.date'))).format("X") }).reverse()
-    const tag = window.location.hash.substring(1)
+    const tag = this.props.location.hash.substring(1)
     pages.forEach(function(page) {
       if (access(page, 'file.ext') === 'md' && _.includes(page.path, '/blog/')) {
         if (_.includes(access(page, 'data.tags').split(' '), tag)) {
