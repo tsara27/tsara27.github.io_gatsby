@@ -9,7 +9,7 @@ const options = {
     'Segoe UI',
     'Helvetica',
     'Arial',
-    'sans-serif',
+    'sans-serif'
   ],
   bodyFontFamily: ['Lato', 'Helvetica'],
   bodyWeight: 400,

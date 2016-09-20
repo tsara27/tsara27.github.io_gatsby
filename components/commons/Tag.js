@@ -4,8 +4,9 @@ import { prefixLink } from 'gatsby-helpers'
 
 module.exports = React.createClass({
   render () {
+    const tag = this.props.tag
     return (
-      <Link className="tag" to={prefixLink('/tags/')}>{this.props.tag}</Link>
+      <Link className="tag" to={prefixLink('/tags/'+'#'+tag)}>{this.props.tag}</Link>
     )
-  },
+  }
 })

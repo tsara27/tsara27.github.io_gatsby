@@ -17,7 +17,7 @@ export default class Index extends React.Component {
       if (access(page, 'file.ext') === 'md' && _.includes(page.path, '/blog/')) {
         const tags = []
         access(page, 'data.tags').split(' ').forEach(function(tag) {
-          tags.push(<Link className="tag" to={prefixLink('/tags/')}>{tag}</Link>)
+          tags.push(tag)
         })
         rows.push(
           <li>
