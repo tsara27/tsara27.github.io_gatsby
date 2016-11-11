@@ -222,6 +222,7 @@ a.tag{
 a.post-link{
   @include transition-duration(0.5s);
   color: #111;
+  font-size: inherit;
   &:hover{
     text-decoration: none;
     color: lighten(#2A180F,10%);

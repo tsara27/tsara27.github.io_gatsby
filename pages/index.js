@@ -21,9 +21,9 @@ export default class Index extends React.Component {
         })
         rows.push(
           <li>
-            <h2>
+            <h1>
               <Link className="post-link" to={prefixLink(page.path)}>{access(page, 'data.title')}</Link>
-            </h2>
+            </h1>
             <p className="post-meta"><PostDate date={access(page, 'data.date')} /> • <Tags tags={tags} /></p>
             <p className="post-content">{access(page, 'data.description')}<Link className="read-more" to={prefixLink(page.path)}>Read More</Link></p>
           </li>
