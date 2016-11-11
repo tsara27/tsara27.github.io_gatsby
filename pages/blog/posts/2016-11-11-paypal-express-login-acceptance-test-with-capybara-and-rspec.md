@@ -20,5 +20,5 @@ I was working on acceptance test for paypal login recently. It was hard on the b
 
 You see that I use `wait_until` above. I use that to verify that the email input is loaded on the page or the input cannot be filled in.
 
-I will share more from what I have learned from coding. See you next time.
+I will share more from what I have learned from web development. See you next time.
 
